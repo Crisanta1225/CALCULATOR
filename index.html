@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Calculator</title>
+</head>
+
+<body>
+     <ul> 
+        <li>BERANIO, CRISANTA TERESA</li>
+        <li>ABELLA, ANGELINE</li>
+        <li>PALUMAR, WENGELINE</li>
+        <li>GABLINES, BERNADETH</li>
+        <li>AMPARADO, LUZANGEL</li>
+
+
+
+
+<div class="calc-box">
+
+    <input type="text" class="display" id="display" disabled>
+
+    <div class="keys">
+        <input type="button" value="C" class="orange" onclick="clearDisplay()">
+
+        <input type="button" value="7" class="pink" onclick="addToDisplay('7')">
+        <input type="button" value="8" class="pink" onclick="addToDisplay('8')">
+        <input type="button" value="9" class="pink" onclick="addToDisplay('9')">
+        <input type="button" value="÷" class="yellow" onclick="addToDisplay('/')">
+
+        <input type="button" value="4" class="pink" onclick="addToDisplay('4')">
+        <input type="button" value="5" class="pink" onclick="addToDisplay('5')">
+        <input type="button" value="6" class="pink" onclick="addToDisplay('6')">
+        <input type="button" value="×" class="yellow" onclick="addToDisplay('*')">
+
+        <input type="button" value="1" class="pink" onclick="addToDisplay('1')">
+        <input type="button" value="2" class="pink" onclick="addToDisplay('2')">
+        <input type="button" value="3" class="pink" onclick="addToDisplay('3')">
+        <input type="button" value="-" class="yellow" onclick="addToDisplay('-')">
+
+        <input type="button" value="0" class="pink" onclick="addToDisplay('0')">
+        <input type="button" value="." class="pink" onclick="addToDisplay('.')">
+        <input type="button" value="⌫" class="pink" onclick="deleteLast()">
+        <input type="button" value="+" class="yellow" onclick="addToDisplay('+')">
+
+        <input type="button" value="=" class="yellow" onclick="calculate()">
+    </div>
+
+</div>
+
+<script>
+let display = document.getElementById("display");
+
+function addToDisplay(char) {
+    display.value += char;
+}
+
+function clearDisplay() {
+    display.value = "";
+}
+
+function deleteLast() {
+    display.value = display.value.slice(0, -1);
+}
+
+function calculate() {
+    try {
+        display.value = eval(display.value);
+    } catch {
+        display.value = "Error";
+    }
+}
+</script>
+
+</body>
+</html>

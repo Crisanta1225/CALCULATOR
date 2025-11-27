@@ -1,0 +1,73 @@
+body {
+    background-image: url('hehe.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.calc-box {
+    background: rgb(186, 115, 186);
+    padding: 20px;
+    border-radius: 20px;
+    width: 500px;
+}
+
+
+.display {
+    width: 100%;
+    background: black;
+    color: white;
+    font-size: 40px;
+    text-align: right;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+
+.keys input[type="button"] {
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.keys input.orange { 
+    background: orange; 
+    color:black;
+ }
+
+.keys input.pink { 
+    background: pink;
+     color: white; 
+    }
+
+.keys input.yellow {
+     background:yellowgreen;
+     color: black; 
+    
+    }
+
+
+.keys input[type="button"]:hover {
+    opacity: 0.8;
+    color: black; 
+}
+
